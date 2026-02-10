@@ -3,20 +3,20 @@
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-**SimpleSure** is a modern insurance management platform designed to simplify the interaction between insurance providers and customers. This project demonstrates a robust full-stack implementation using **Laravel 11 (Breeze API)** for the backend and **Next.js 15** for the frontend.
+**SimpleSure** is a modern insurance management platform designed to simplify the interaction between insurance providers and customers. This project demonstrates a robust full-stack implementation using **Laravel 12.50.0 (Breeze API)** for the backend and **Next.js v16.1.6** for the frontend.
 
 ## 🚀 Tech Stack
 
 ### Backend (API Core)
 
-- **Framework:** Laravel 11
+- **Framework:** Laravel 12
 - **Authentication:** Laravel Sanctum (SPA Auth) & Breeze API
 - **Database:** MySQL
 - **Key Features:** Eloquent ORM, API Resources, Custom Seeder, Policy & Claim Management Logic.
 
 ### Frontend (User Interface)
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Styling:** Tailwind CSS
 - **State Management:** React Hooks / SWR / TanStack Query
 - **HTTP Client:** Axios (Interceptors configured)
