@@ -18,6 +18,9 @@ Route::get('/products/{id}', [ProductController::class, 'show']);
 // PRIVATE ROUTES
 Route::middleware(['auth:sanctum'])->group(function () {
 
+    // Create Product
+    Route::post('/products', [ProductController::class, 'store']);
+
     // Fitur Asuransi (Policy)
     Route::get('/policies', [PolicyController::class, 'index']);     // List Polis Saya
     Route::post('/policies', [PolicyController::class, 'store']);    // Beli Polis

@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\Policy;
+use App\Models\Category;
 
 class Product extends Model
 {
@@ -19,12 +22,13 @@ class Product extends Model
         'image_url',
         'features',
         'is_active',
+        'visibility',
+        'category_id',
     ];
 
     // Casting
     protected $casts = [
         'base_price' => 'decimal:2',
-        'coverage_amount' => 'decimal:2',
         'features' => 'array',
         'is_active' => 'boolean',
     ];
@@ -33,5 +37,10 @@ class Product extends Model
     public function policies()
     {
         return $this->hasMany(Policy::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }
